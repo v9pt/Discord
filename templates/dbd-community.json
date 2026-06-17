@@ -1,0 +1,212 @@
+{
+  "name": "DBD Community Server",
+  "description": "A Dead By Daylight & Red Dead Redemption gaming community",
+  "roles": [
+    {
+      "name": "Owner",
+      "color": "#F1C40F",
+      "hoist": true,
+      "position": 14,
+      "permissions": ["Administrator"]
+    },
+    {
+      "name": "Admin",
+      "color": "#E74C3C",
+      "hoist": true,
+      "position": 13,
+      "permissions": ["Administrator"]
+    },
+    {
+      "name": "Moderator",
+      "color": "#E67E22",
+      "hoist": true,
+      "position": 12,
+      "permissions": [
+        "ManageMessages",
+        "KickMembers",
+        "ModerateMembers",
+        "ViewAuditLog"
+      ]
+    },
+    {
+      "name": "Trial Moderator",
+      "color": "#F39C12",
+      "hoist": true,
+      "position": 11,
+      "permissions": ["ManageMessages", "ModerateMembers"]
+    },
+    {
+      "name": "DBD Veteran",
+      "color": "#9B59B6",
+      "hoist": false,
+      "position": 10,
+      "permissions": []
+    },
+    {
+      "name": "Survivor Main",
+      "color": "#2ECC71",
+      "hoist": false,
+      "position": 9,
+      "permissions": []
+    },
+    {
+      "name": "Killer Main",
+      "color": "#E74C3C",
+      "hoist": false,
+      "position": 8,
+      "permissions": []
+    },
+    {
+      "name": "Cowgirl",
+      "color": "#8B4513",
+      "hoist": false,
+      "position": 7,
+      "permissions": []
+    },
+    {
+      "name": "Girls Chat",
+      "color": "#FF69B4",
+      "hoist": false,
+      "position": 6,
+      "permissions": []
+    },
+    {
+      "name": "Booster",
+      "color": "#FF73FA",
+      "hoist": true,
+      "position": 5,
+      "permissions": []
+    },
+    {
+      "name": "Verified",
+      "color": "#3498DB",
+      "hoist": false,
+      "position": 4,
+      "permissions": []
+    },
+    {
+      "name": "Member",
+      "color": "#95A5A6",
+      "hoist": false,
+      "position": 3,
+      "permissions": [
+        "ViewChannel",
+        "SendMessages",
+        "ReadMessageHistory",
+        "UseExternalEmojis",
+        "AddReactions",
+        "AttachFiles",
+        "EmbedLinks",
+        "Connect",
+        "Speak"
+      ]
+    },
+    {
+      "name": "New Member",
+      "color": "#4E4E50",
+      "hoist": false,
+      "position": 2,
+      "permissions": []
+    }
+  ],
+  "categories": [
+    {
+      "name": "📌 INFORMATION",
+      "key": "information",
+      "permissions": "readonly",
+      "channels": [
+        { "name": "getting-started", "type": "text", "key": "gettingStarted", "permissions": "readonly", "topic": "🚀 New here? Start here! Everything you need to know." },
+        { "name": "rules", "type": "text", "key": "rules", "permissions": "readonly", "topic": "📜 Please read and follow our server rules." },
+        { "name": "announcements", "type": "text", "key": "announcements", "permissions": "announcements", "topic": "📢 Official server announcements." },
+        { "name": "events", "type": "text", "key": "events", "permissions": "readonly", "topic": "🎉 Upcoming community events." },
+        { "name": "faq", "type": "text", "key": "faq", "permissions": "readonly", "topic": "❓ Frequently asked questions." },
+        { "name": "bot-dashboard", "type": "text", "key": "botDashboard", "permissions": "staffOnly", "topic": "🤖 Backup bot invite links — keep the server protected 24/7." }
+      ]
+    },
+    {
+      "name": "🎉 ONBOARDING",
+      "key": "onboarding",
+      "permissions": "default",
+      "channels": [
+        { "name": "verify", "type": "text", "key": "verify", "permissions": "verify", "topic": "✅ Click the button below to verify and gain access to the server." },
+        { "name": "role-selection", "type": "text", "key": "roleSelection", "permissions": "readonly", "topic": "🎭 Select your game roles and preferences here." },
+        { "name": "introductions", "type": "text", "key": "introductions", "permissions": "default", "topic": "👋 Introduce yourself to the community!" }
+      ]
+    },
+    {
+      "name": "🎮 DEAD BY DAYLIGHT",
+      "key": "dbd",
+      "permissions": "default",
+      "channels": [
+        { "name": "dbd-chat", "type": "text", "key": "dbdChat", "topic": "💬 General Dead By Daylight discussion." },
+        { "name": "tips-and-builds", "type": "text", "key": "dbdTips", "topic": "🔧 Share perks, builds, and strategies." },
+        { "name": "clips-and-screenshots", "type": "text", "key": "dbdClips", "topic": "🎬 Share your best moments!" },
+        { "name": "looking-for-group", "type": "text", "key": "dbdLfg", "topic": "🔍 Find survivors and killers to play with." },
+        { "name": "memes", "type": "text", "key": "dbdMemes", "topic": "😂 DBD memes and funny content." }
+      ]
+    },
+    {
+      "name": "🤠 RED DEAD REDEMPTION",
+      "key": "rdr",
+      "permissions": "default",
+      "channels": [
+        { "name": "rdr-chat", "type": "text", "key": "rdrChat", "topic": "🤠 General Red Dead Redemption discussion." },
+        { "name": "rdr-screenshots", "type": "text", "key": "rdrScreenshots", "topic": "📸 Share your RDR2 photos and artwork." },
+        { "name": "posse-recruitment", "type": "text", "key": "posseRecruitment", "topic": "🐎 Recruit members for your posse!" }
+      ]
+    },
+    {
+      "name": "🌍 COMMUNITY",
+      "key": "community",
+      "permissions": "default",
+      "channels": [
+        { "name": "general-chat", "type": "text", "key": "generalChat", "topic": "💬 General community discussion." },
+        { "name": "off-topic", "type": "text", "key": "offTopic", "topic": "🗣️ Talk about anything!" },
+        { "name": "media-and-art", "type": "text", "key": "mediaAndArt", "topic": "🎨 Share your art, music, and media." },
+        { "name": "selfies", "type": "text", "key": "selfies", "topic": "📸 Share selfies with the community!" },
+        { "name": "pets", "type": "text", "key": "pets", "topic": "🐾 Show off your adorable pets!" }
+      ]
+    },
+    {
+      "name": "🎙 VOICE CHANNELS",
+      "key": "voice",
+      "permissions": "default",
+      "channels": [
+        { "name": "General VC", "type": "voice", "key": "generalVc" },
+        { "name": "DBD VC", "type": "voice", "key": "dbdVc" },
+        { "name": "RDR VC", "type": "voice", "key": "rdrVc" },
+        { "name": "Chill VC", "type": "voice", "key": "chillVc" }
+      ]
+    },
+    {
+      "name": "📸 SOCIAL MEDIA",
+      "key": "social",
+      "permissions": "default",
+      "channels": [
+        { "name": "instagram-shares", "type": "text", "key": "instagramShares", "topic": "📱 Share Instagram posts and reels." },
+        { "name": "youtube-content", "type": "text", "key": "youtubeContent", "topic": "▶️ Share YouTube videos and streams." }
+      ]
+    },
+    {
+      "name": "👩 GIRLS CHAT",
+      "key": "girls",
+      "permissions": "girlsOnly",
+      "channels": [
+        { "name": "girls-chat", "type": "text", "key": "girlsChat", "permissions": "girlsOnly", "topic": "💕 A safe space for girls to chat." },
+        { "name": "vent-and-support", "type": "text", "key": "ventAndSupport", "permissions": "girlsOnly", "topic": "💜 Vent and get support from the community." }
+      ]
+    },
+    {
+      "name": "🛡 STAFF",
+      "key": "staff",
+      "permissions": "staffOnly",
+      "channels": [
+        { "name": "staff-chat", "type": "text", "key": "staffChat", "permissions": "staffOnly", "topic": "🛡 Staff only discussion." },
+        { "name": "applications", "type": "text", "key": "applications", "permissions": "staffOnly", "topic": "📋 Staff applications inbox." },
+        { "name": "reports", "type": "text", "key": "reports", "permissions": "staffOnly", "topic": "🚨 User reports." },
+        { "name": "logs", "type": "text", "key": "logs", "permissions": "staffOnly", "topic": "📋 Bot action logs." },
+        { "name": "modmail", "type": "text", "key": "modmail", "permissions": "staffOnly", "topic": "📬 Modmail inbox." }
+      ]
+    }
+  ]
+}

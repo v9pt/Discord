@@ -1,0 +1,47 @@
+version: '3.8'
+
+services:
+  bot:
+    build: .
+    container_name: community-bot
+    restart: unless-stopped
+    env_file:
+      - .env
+    environment:
+      - NODE_ENV=production
+      - MONGODB_URI=mongodb+srv://BTP:BTP2026@peerfact.zdqkg24.mongodb.net/
+    depends_on:
+      mongodb:
+        condition: service_healthy
+    volumes:
+      - ./logs:/app/logs
+      - ./assets:/app/assets:ro
+    networks:
+      - bot-network
+
+  mongodb:
+    image: mongo:7-jammy
+    container_name: community-bot-mongo
+    restart: unless-stopped
+    environment:
+      MONGO_INITDB_DATABASE: communitybot
+    volumes:
+      - mongodb_data:/data/db
+      - mongodb_config:/data/configdb
+    networks:
+      - bot-network
+    healthcheck:
+      test: echo 'db.runCommand("ping").ok' | mongosh localhost:27017/communitybot --quiet
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+volumes:
+  mongodb_data:
+    driver: local
+  mongodb_config:
+    driver: local
+
+networks:
+  bot-network:
+    driver: bridge

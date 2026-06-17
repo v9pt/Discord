@@ -65,10 +65,12 @@ async function main() {
   });
 
   // Login to Discord
+  console.log('🔌 Connecting to Discord...');
   await client.login(process.env.TOKEN);
+  console.log('✅ client.login() promise resolved successfully');
 }
 
 main().catch((err) => {
-  console.error('❌ Fatal startup error:', err.message);
+  console.error('❌ Fatal startup error:', err);
   process.exit(1);
 });

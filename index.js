@@ -17,6 +17,8 @@ for (const key of required) {
   }
 }
 
+const http = require('http');
+
 // Initialize Discord client with all required intents
 const client = new Client({
   intents: [
@@ -51,6 +53,16 @@ async function main() {
   // Load handlers
   loadCommands(client);
   loadEvents(client);
+
+  // Start keep-alive HTTP server
+  const port = process.env.PORT || 3000;
+  const server = http.createServer((req, res) => {
+    res.writeHead(200, { 'Content-Type': 'text/plain' });
+    res.end('Bot is online and healthy!\n');
+  });
+  server.listen(port, () => {
+    console.log(`🌐 Keep-alive server listening on port ${port}`);
+  });
 
   // Login to Discord
   await client.login(process.env.TOKEN);

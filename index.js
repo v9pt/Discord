@@ -60,6 +60,9 @@ async function main() {
     res.writeHead(200, { 'Content-Type': 'text/plain' });
     res.end('Bot is online and healthy!\n');
   });
+  server.on('error', (err) => {
+    console.warn(`⚠️ Keep-alive server failed to start (e.g. port already in use): ${err.message}`);
+  });
   server.listen(port, () => {
     console.log(`🌐 Keep-alive server listening on port ${port}`);
   });
